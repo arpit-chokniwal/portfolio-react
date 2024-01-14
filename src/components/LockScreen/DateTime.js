@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { getRealTime } from "../utils/helperFunctions";
 
 const DateTime = () => {
-    const [getTime] = React.useState(getRealTime());
+    const [getTime, setGetTime] = React.useState(getRealTime());
+
+    useEffect(() => {
+        setGetTime(getRealTime());
+    }, [])
 
     return (
         <div className="w-[100%] mt-2 flex flex-col justify-center items-center h-fit gap-0">
