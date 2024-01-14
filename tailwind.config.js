@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'lock-background': "url('/public/lockPageBgImage.jpg')",
+      }
+    },
   },
   plugins: [],
 }
