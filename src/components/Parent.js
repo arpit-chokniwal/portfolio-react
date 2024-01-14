@@ -16,6 +16,7 @@ const Parent = () => {
                     <MdOutlineSignalCellularAlt className='text-white' size={20} />
                     <FaWifi className='text-white' size={20} />
                     <IoBatteryFull className='text-white' size={23} />
+                    
                 </div>
             </div>
         </div>
