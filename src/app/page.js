@@ -1,12 +1,14 @@
+'use client';
+import HomeScreen from "@/components/HomeScreens/HomeScreen";
+import LockScreen from "@/components/LockScreen/Lock";
+import NavBar from "@/components/NavBar";
 import React, { useState } from "react";
-import NavBar from "./components/NavBar";
-import LockScreen from "./components/LockScreen/Lock.js";
-import HomeScreen from "./components/HomeScreens/HomeScreen.js";
 
-const App = () => {
+
+export default function Home() {
   const [shouldShowLockScreen, setShouldShowLockScreen] = useState(true);
   return (
-    <div className="flex w-full h-[100vh] bg-red-300 justify-center items-center select-none ">
+    <div className="flex bg-red-300 justify-center items-center h-[100vh] w-[100vw]">
       <div>
         <div className="relative bottom-[20vh] h-[16px] left-[2px] z-0 w-[4px] rounded-md bg-black">
           {" "}
@@ -19,7 +21,7 @@ const App = () => {
           {" "}
         </div>
       </div>
-      <div className="bg-lock-background bg-cover z-10 flex flex-col w-[305px] h-[75vh] max-h-[610px] border-[10px] border-black rounded-[50px] gap-3">
+      <div className="bg-lock-background bg-cover z-10 flex flex-col w-[305px] h-[610px] border-[10px] border-black rounded-[50px] gap-3">
         <div>
           <NavBar shouldShowTime={!shouldShowLockScreen} />
         </div>
@@ -34,6 +36,4 @@ const App = () => {
       </div>
     </div>
   );
-};
-
-export default App;
+}

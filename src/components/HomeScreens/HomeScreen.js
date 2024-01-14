@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Apps, BottomAppBar } from "../utils/constants";
+import Image from 'next/image'
 
 const HomeScreen = () => {
     return (
@@ -23,10 +24,12 @@ const HomeScreen = () => {
                                 className="w-[45px] h-[45px] rounded-xl overflow-hidden cursor-pointer "
                                 onClick={item.onClick}
                             >
-                                <img
+                                <Image
                                     src={item.src}
                                     alt={item.alt}
                                     className="object-cover w-full  h-full"
+                                    width={"100"}
+                                    height={"100"}
                                 />
                             </div>
                             {/* Title */}
@@ -48,10 +51,12 @@ const HomeScreen = () => {
                                 className="w-[45px] h-[45px] rounded-xl overflow-hidden cursor-pointer "
                                 onClick={item.onClick}
                             >
-                                <img
+                                <Image
                                     src={item.src}
                                     alt={item.alt}
                                     className="object-cover w-full h-full"
+                                    width={"100"}
+                                    height={"100"}
                                 />
                             </div>
                         );

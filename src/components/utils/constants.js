@@ -1,13 +1,13 @@
-const Github = require("../Icons/github.webp")
-const LinkedIn = require("../Icons/linkedin.png")
-const Resume = require("../Icons/resume.png")
-const Twitter = require("../Icons/twitter.webp")
-const Mail = require("../Icons/mail.png")
-const Music = require("../Icons/music.png")
-const Notes = require("../Icons/notes.webp")
-const Education = require("../Icons/education.webp")
-const Experience = require("../Icons/Experience.png")
-const Project = require("../Icons/project.jpg")
+// const Github = require("/github.webp")
+// const LinkedIn = require("/linkedin.png")
+// const Resume = require("/resume.png")
+// const Twitter = require("/twitter.webp")
+// const Mail = require("/mail.png")
+// const Music = require("/music.png")
+// const Notes = require("/notes.webp")
+// const Education = require("/education.webp")
+// const Experience = require("/Experience.png")
+// const Project = require("/project.jpg")
 
 
 export const BottomAppBar = [
@@ -16,7 +16,7 @@ export const BottomAppBar = [
         onClick: () => {
             window.open("https://github.com/arpit-chokniwal", "_blank");
         },
-        src: Github,
+        src: "/github.webp",
         title: "GitHub",
         key: "github",
     },
@@ -25,7 +25,7 @@ export const BottomAppBar = [
         onClick: () => {
             window.open("https://www.linkedin.com/in/arpitchokniwal", "_blank");
         },
-        src: LinkedIn,
+        src: "/linkedin.png",
         title: "LinkedIn",
         key: "linkedin",
     },
@@ -34,7 +34,7 @@ export const BottomAppBar = [
         onClick: () => {
             window.open("https://arpitchokniwal.github.io/resume/", "_blank");
         },
-        src: Resume,
+        src: "/resume.png",
         title: "Resume",
         key: "resume",
     },
@@ -43,7 +43,7 @@ export const BottomAppBar = [
         onClick: () => {
             window.open("https://twitter.com/arpitwt", "_blank");
         },
-        src: Twitter,
+        src: "/twitter.webp",
         title: "Twitter",
         key: "twitter",
     }
@@ -55,7 +55,7 @@ export const Apps = [
         onClick: () => {
             window.open("mailto:arpitchokniwal52@gmail.com", "_blank");
         },
-        src: Mail,
+        src: "/mail.png",
         title: "Mail",
         key: "mail",
     },
@@ -64,7 +64,7 @@ export const Apps = [
         onClick: () => {
             window.open("https://open.spotify.com/artist/5X5k9yj9qZlK9yHg5sZBt8", "_blank");
         },
-        src: Music,
+        src: "/music.png",
         title: "Music",
         key: "music",
     },
@@ -73,7 +73,7 @@ export const Apps = [
         onClick: () => {
             window.open("https://arpitchokniwal.github.io/notes/", "_blank");
         },
-        src: Notes,
+        src: "/notes.webp",
         title: "Notes",
         key: "notes",
     },
@@ -82,7 +82,7 @@ export const Apps = [
         onClick: () => {
             window.open("https://arpitchokniwal.github.io/experience/", "_blank");
         },
-        src: Experience,
+        src: "/Experience.png",
         title: "Experience",
         key: "experience",
     },
@@ -91,7 +91,7 @@ export const Apps = [
         onClick: () => {
             window.open("https://arpitchokniwal.github.io/resume/", "_blank");
         },
-        src: Resume,
+        src: "/resume.png",
         title: "Resume",
         key: "resume",
     },
@@ -100,7 +100,7 @@ export const Apps = [
         onClick: () => {
             window.open("https://arpitchokniwal.github.io/project/", "_blank");
         },
-        src: Project,
+        src: "/project.jpg",
         title: "Projects",
         key: "project",
     },
@@ -109,7 +109,7 @@ export const Apps = [
         onClick: () => {
             window.open("https://arpitchokniwal.github.io/education/", "_blank");
         },
-        src: Education,
+        src: "/education.webp",
         title: "Education",
         key: "education",
     }
