@@ -28,7 +28,7 @@ const HomeScreen = ({ setPageName }) => {
                             key={item.key}
                         >
                             <div
-                                className="w-[45px] h-[45px] rounded-xl overflow-hidden cursor-pointer "
+                                className="w-[43px] h-[44px] rounded-xl overflow-hidden cursor-pointer "
                                 onClick={() => item.onClick(handlePageNameClick)}
                             >
                                 <Image
@@ -40,7 +40,7 @@ const HomeScreen = ({ setPageName }) => {
                                 />
                             </div>
                             {/* Title */}
-                            <p className="text-white text-center text-[11px] mt-[2px]">
+                            <p className="text-white text-center text-[12px] mt-[2px]">
                                 {item.title}
                             </p>
                         </div>
@@ -55,7 +55,7 @@ const HomeScreen = ({ setPageName }) => {
                         return (
                             <div
                                 key={item.key}
-                                className="w-[45px] h-[45px] rounded-xl overflow-hidden cursor-pointer "
+                                className="w-[43px] h-[44px] rounded-xl overflow-hidden cursor-pointer "
                                 onClick={item.onClick}
                             >
                                 <Image
