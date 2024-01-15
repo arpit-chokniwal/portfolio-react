@@ -27,7 +27,7 @@ const LockScreen = ({ setShouldShowLockScreen }) => {
                 {width > 700 ? (
                     <SlideToUnlock setShouldShowLockScreen={setShouldShowLockScreen} />
                 ) : (
-                    <div className="w-[80%] h-[40px] mb-[3px] flex justify-center items-center bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl" onClick={() => setShouldShowLockScreen(false)}>
+                    <div className="w-[80%] h-[40px] mb-[3px] cursor-pointer flex justify-center items-center bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl" onClick={() => setShouldShowLockScreen(false)}>
                         <p className="text-white text-lg text-center mr-3">
                             Click To Unlock
                         </p>

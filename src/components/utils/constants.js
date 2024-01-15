@@ -50,7 +50,7 @@ export const Apps = [
     {
         alt: "Music",
         onClick: () => {
-            window.open("https://open.spotify.com/artist/5X5k9yj9qZlK9yHg5sZBt8", "_blank");
+            window.open("https://open.spotify.com/artist/0Tg8B3bNeO7FijIWvA7UHI", "_blank");
         },
         src: "/music.png",
         title: "Music",
