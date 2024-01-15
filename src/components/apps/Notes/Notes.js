@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Notes = () => {
+const Notes = ({ setShouldShowNav }) => {
   return (
     <div>Notes</div>
   )

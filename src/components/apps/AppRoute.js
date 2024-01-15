@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HomeScreen from "../HomeScreens/HomeScreen";
 import Mail from "./Mail/Mail";
 import Projects from "./Projects/Projects";
@@ -11,13 +11,15 @@ import { IoIosArrowBack } from "react-icons/io";
 import { motion } from "framer-motion";
 
 const AppRoute = ({ pageName, setPageName }) => {
+    const [shouldShowNav, setShouldShowNav] = useState(true);
+
     const ComponentToReturn = {
         [PageNames.HOME]: <HomeScreen setPageName={setPageName} />,
-        [PageNames.MAIL]: <Mail />,
+        [PageNames.MAIL]: <Mail setShouldShowNav={setShouldShowNav} setPageName={setPageName} />,
         [PageNames.PROJECT]: <Projects />,
         [PageNames.EXPERIENCE]: <Experience />,
         [PageNames.EDUCATION]: <Education />,
-        [PageNames.NOTES]: <Notes />,
+        [PageNames.NOTES]: <Notes setShouldShowNav={setShouldShowNav} />,
         [PageNames.LOCK]: <LockScreen setPageName={setPageName} />,
     };
 
@@ -37,14 +39,14 @@ const AppRoute = ({ pageName, setPageName }) => {
                 transition={{ duration: 0.7 }}
                 className="w-full flex flex-col gap-2 justify-start items-start -mt-4"
             >
-                <div className="w-full flex justify-start items-center gap-2">
+                {shouldShowNav && <div className="w-full flex justify-start items-center gap-2">
                     <IoIosArrowBack
                         size={20}
                         className="text-black cursor-pointer"
                         onClick={() => setPageName(PageNames.HOME)}
                     />
                     <p className="text-black">{pageName}</p>
-                </div>
+                </div>}
                 <div className="text-black mr-2 h-full w-full flex justify-start items-start">
                     {ComponentToReturn[pageName]}
                 </div>
