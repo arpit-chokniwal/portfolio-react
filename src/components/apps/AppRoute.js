@@ -45,7 +45,7 @@ const AppRoute = ({ pageName, setPageName }) => {
                     />
                     <p className="text-black">{pageName}</p>
                 </div>
-                <div className="bg-black h-fit w-full overflow-hidden flex justify-start items-start">
+                <div className="text-black mr-2 h-full w-full flex justify-start items-start">
                     {ComponentToReturn[pageName]}
                 </div>
             </motion.div>

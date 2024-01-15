@@ -9,7 +9,7 @@ import React, { useState } from "react";
 export default function Home() {
   const [pageName, setPageName] = useState(PageNames.LOCK);
   return (
-    <div className="flex justify-center items-center h-[100vh] w-[100vw]">
+    <div className="flex justify-center items-center h-[100vh] w-[100vw] select-none">
       {/* Left Side Buttons */}
       <div>
         <div className="relative bottom-[20vh] h-[16px] left-[2px] z-0 w-[4px] rounded-md bg-black">

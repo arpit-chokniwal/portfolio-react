@@ -1,3 +1,7 @@
+import { FaUserGraduate } from "react-icons/fa";
+import { IoSchool } from "react-icons/io5";
+import { MdCastForEducation } from "react-icons/md";
+
 export const PageNames = {
     HOME: "Home",
     PROJECT: "Projects",
@@ -102,3 +106,27 @@ export const Apps = [
         key: "education",
     }
 ]
+
+export const EducationContent = [
+    {
+        institute: "Masai School",
+        location: "Bengaluru, Karnataka",
+        degree: "30 week Courses",
+        CGPA: "9.2",
+        icon: <MdCastForEducation className="text-white" size={22} />,
+    },
+    {
+        institute: "Singhania University",
+        location: "Jhunjhunu, Rajasthan",
+        degree: "BCA",
+        CGPA: "7.8",
+        icon: <FaUserGraduate className="text-white" size={22} />,
+    },
+    {
+        institute: "Tanishq Academy",
+        location: "Kota, Rajasthan",
+        degree: "Class XII",
+        Percentage: "90.2",
+        icon: <IoSchool className="text-white" size={22} />,
+    },
+];
