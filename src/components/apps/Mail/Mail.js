@@ -8,6 +8,9 @@ const Mail = ({ setShouldShowNav, setPageName }) => {
   useEffect(() => {
     setShouldShowNav(false);
   }, []);
+  const [message, setMessage] = React.useState("Hey 👋");
+  const [subject, setSubject] = React.useState("I'm interested in working with you");
+
   return (
     <div className="h-full w-full flex flex-col justify-between ">
       <div className="h-full w-full flex flex-col gap-2 -mt-4">
@@ -32,21 +35,13 @@ const Mail = ({ setShouldShowNav, setPageName }) => {
           </div>
 
           <div>
-            <a href="mailto:arpitchokniwal09@gmail.com?subject=SendMail&body=Description">
+            <a href={`mailto:arpitchokniwal09@gmail.com?subject=${subject}&body=${message}`}>
               <IoSendSharp size={18} className="text-blue-500 " />
             </a>
           </div>
         </div>
 
         <div className="flex flex-col gap-5">
-          {/* Email */}
-          <div className="flex gap-2 w-full border-b-[1px] border-gray-200 py-1 ">
-            <p className="text-gray-600 text-[14px]">Email:</p>
-            <input
-              className="w-full outline-none text-[15px] text-gray-700 mb-1"
-              type="email"
-            />
-          </div>
 
           {/* Subject */}
           <div className="flex gap-2 w-full border-b-[1px] border-gray-200 py-1 ">
@@ -54,6 +49,7 @@ const Mail = ({ setShouldShowNav, setPageName }) => {
             <input
               className="w-full outline-none text-[15px] text-gray-700 mb-1"
               type="text"
+              onChange={(e) => setSubject(e.target.value)}
             />
           </div>
 
@@ -63,6 +59,7 @@ const Mail = ({ setShouldShowNav, setPageName }) => {
             <input
               className="w-full outline-none text-[15px] text-gray-700 mb-1 "
               type="text"
+              onChange={(e) => setMessage(e.target.value)}
             />
           </div>
         </div>
