@@ -65,7 +65,7 @@ const Mail = ({ setShouldShowNav, setPageName }) => {
         </div>
       </div>
 
-      <div className="h-fit w-full flex flex-wrap justify-center text-center items-center mt-[250px]">
+      <div className="h-fit w-full flex flex-wrap justify-center text-center items-center mt-[310px]">
         <p className="text-black font-bold text-[12px] flex flex-wrap justify-center">
           Want to connect over phone, Call on
           <a href="tel:+919587029050">
