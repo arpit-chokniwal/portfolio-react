@@ -1,15 +1,3 @@
-// const Github = require("/github.webp")
-// const LinkedIn = require("/linkedin.png")
-// const Resume = require("/resume.png")
-// const Twitter = require("/twitter.webp")
-// const Mail = require("/mail.png")
-// const Music = require("/music.png")
-// const Notes = require("/notes.webp")
-// const Education = require("/education.webp")
-// const Experience = require("/Experience.png")
-// const Project = require("/project.jpg")
-
-
 export const BottomAppBar = [
     {
         alt: "github",

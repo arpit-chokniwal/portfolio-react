@@ -8,7 +8,7 @@ import React, { useState } from "react";
 export default function Home() {
   const [shouldShowLockScreen, setShouldShowLockScreen] = useState(true);
   return (
-    <div className="flex bg-red-300 justify-center items-center h-[100vh] w-[100vw]">
+    <div className="flex justify-center items-center h-[100vh] w-[100vw]">
       <div>
         <div className="relative bottom-[20vh] h-[16px] left-[2px] z-0 w-[4px] rounded-md bg-black">
           {" "}
