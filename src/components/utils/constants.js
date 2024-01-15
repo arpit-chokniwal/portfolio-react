@@ -130,3 +130,19 @@ export const EducationContent = [
         icon: <IoSchool className="text-white" size={22} />,
     },
 ];
+
+
+export const NotesContents = [
+    {
+      label: "Technical Skills",
+      lastEdited: "Today",
+      tags: ["technical_skills"],
+      onClick: () => { },
+    },
+    {
+      label: "Soft Skills",
+      lastEdited: "Yesterday",
+      tags: ["soft_skills"],
+      onClick: () => { },
+    },
+  ];

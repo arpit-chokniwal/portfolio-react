@@ -19,7 +19,7 @@ const AppRoute = ({ pageName, setPageName }) => {
         [PageNames.PROJECT]: <Projects />,
         [PageNames.EXPERIENCE]: <Experience />,
         [PageNames.EDUCATION]: <Education />,
-        [PageNames.NOTES]: <Notes setShouldShowNav={setShouldShowNav} />,
+        [PageNames.NOTES]: <Notes setShouldShowNav={setShouldShowNav} setPageName={setPageName}/>,
         [PageNames.LOCK]: <LockScreen setPageName={setPageName} />,
     };
 
