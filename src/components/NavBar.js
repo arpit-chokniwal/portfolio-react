@@ -5,7 +5,7 @@ import { FaWifi } from "react-icons/fa";
 import { MdOutlineSignalCellularAlt } from "react-icons/md";
 import { getRealTime } from "./utils/helperFunctions";
 
-const NavBar = ({ shouldShowTime }) => {
+const NavBar = ({ shouldShowTime, whiteTheme }) => {
     return (
         <div className="flex justify-center items-center h-[54px] w-[95%] ml-[2%] mt-[5px] gap-[4px]">
             <motion.div
@@ -16,7 +16,10 @@ const NavBar = ({ shouldShowTime }) => {
                 className="h-[30px] w-[32%]"
             >
                 {shouldShowTime && (
-                    <p className="text-center mt-1 text-white">
+                    <p
+                        className={`text-center mt-1 ${whiteTheme ? "text-white" : "text-black"
+                            }`}
+                    >
                         {" "}
                         {getRealTime()?.time || "00:00"}{" "}
                     </p>
@@ -24,9 +27,18 @@ const NavBar = ({ shouldShowTime }) => {
             </motion.div>
             <div className="h-[30px] w-[35%] bg-black rounded-2xl"></div>
             <div className="h-[30px] w-[30%] ml-2 flex justify-center items-center gap-2">
-                <MdOutlineSignalCellularAlt className="text-white" size={20} />
-                <FaWifi className="text-white" size={20} />
-                <IoBatteryFull className="text-white" size={23} />
+                <MdOutlineSignalCellularAlt
+                    className={`${whiteTheme ? "text-white" : "text-black"}`}
+                    size={20}
+                />
+                <FaWifi
+                    className={`${whiteTheme ? "text-white" : "text-black"}`}
+                    size={20}
+                />
+                <IoBatteryFull
+                    className={`${whiteTheme ? "text-white" : "text-black"}`}
+                    size={23}
+                />
             </div>
         </div>
     );

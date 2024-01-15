@@ -1,3 +1,13 @@
+export const PageNames = {
+    HOME: "Home",
+    PROJECT: "Projects",
+    EXPERIENCE: "Experience",
+    NOTES: "Notes",
+    MAIL: "Mail",
+    EDUCATION: "Education",
+    LOCK: "Lock"
+}
+
 export const BottomAppBar = [
     {
         alt: "github",
@@ -40,9 +50,7 @@ export const BottomAppBar = [
 export const Apps = [
     {
         alt: "Mail",
-        onClick: () => {
-            window.open("mailto:arpitchokniwal52@gmail.com", "_blank");
-        },
+        onClick: (callBack) => callBack(PageNames.MAIL),
         src: "/mail.png",
         title: "Mail",
         key: "mail",
@@ -58,18 +66,14 @@ export const Apps = [
     },
     {
         alt: "Notes",
-        onClick: () => {
-            window.open("https://arpitchokniwal.github.io/notes/", "_blank");
-        },
+        onClick: (callBack) => callBack(PageNames.NOTES),
         src: "/notes.webp",
         title: "Notes",
         key: "notes",
     },
     {
         alt: "Experience",
-        onClick: () => {
-            window.open("https://arpitchokniwal.github.io/experience/", "_blank");
-        },
+        onClick: (callBack) => callBack(PageNames.EXPERIENCE),
         src: "/Experience.png",
         title: "Experience",
         key: "experience",
@@ -85,18 +89,14 @@ export const Apps = [
     },
     {
         alt: "Project",
-        onClick: () => {
-            window.open("https://arpitchokniwal.github.io/project/", "_blank");
-        },
+        onClick: (callBack) => callBack(PageNames.PROJECT),
         src: "/project.jpg",
         title: "Projects",
         key: "project",
     },
     {
         alt: "Education",
-        onClick: () => {
-            window.open("https://arpitchokniwal.github.io/education/", "_blank");
-        },
+        onClick: (callBack) => callBack(PageNames.EDUCATION),
         src: "/education.webp",
         title: "Education",
         key: "education",

@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import DateTime from "./DateTime";
 import SlideToUnlock from "./SlideToUnlock";
+import { PageNames } from "../utils/constants";
 
-const LockScreen = ({ setShouldShowLockScreen }) => {
+const LockScreen = ({ setPageName }) => {
     const [width, setWidth] = useState(0);
     const handleResize = () => setWidth(window.innerWidth);
     useEffect(() => {
@@ -16,7 +17,7 @@ const LockScreen = ({ setShouldShowLockScreen }) => {
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.25 }}
             className="h-[100%] flex flex-col justify-between"
         >
             <div></div>
@@ -25,9 +26,9 @@ const LockScreen = ({ setShouldShowLockScreen }) => {
             </div>
             <div className="flex flex-col gap-4 h-fit justify-center items-center">
                 {width > 700 ? (
-                    <SlideToUnlock setShouldShowLockScreen={setShouldShowLockScreen} />
+                    <SlideToUnlock setPageName={setPageName} />
                 ) : (
-                    <div className="w-[80%] h-[40px] mb-[3px] cursor-pointer flex justify-center items-center bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl" onClick={() => setShouldShowLockScreen(false)}>
+                    <div className="w-[80%] h-[40px] mb-[3px] cursor-pointer flex justify-center items-center bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl" onClick={() => setPageName(PageNames.HOME)}>
                         <p className="text-white text-lg text-center mr-3">
                             Click To Unlock
                         </p>

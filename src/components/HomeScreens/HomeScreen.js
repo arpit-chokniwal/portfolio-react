@@ -1,16 +1,23 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Apps, BottomAppBar } from "../utils/constants";
-import Image from 'next/image'
+import Image from "next/image";
 
-const HomeScreen = () => {
+const HomeScreen = ({ setPageName }) => {
+    const variants = {
+        hidden: { opacity: 0, x: 10 },
+        visible: { opacity: 1, x: 0 },
+        exit: { opacity: 0, x: 0 }
+    };
+    const handlePageNameClick = (pageName) => setPageName(pageName);
     return (
         <motion.div
-            animate={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-            exit={{ opacity: 0 }}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={variants}
             transition={{ duration: 0.7 }}
-            className="h-[100%] flex flex-col justify-between items-center gap-[4px]"
+            className="h-[100%] flex flex-col justify-between items-center gap-[4px] mt-1"
         >
             {/* Apps */}
             <div className="flex flex-wrap w-[90%] gap-5 items-center">
@@ -22,7 +29,7 @@ const HomeScreen = () => {
                         >
                             <div
                                 className="w-[45px] h-[45px] rounded-xl overflow-hidden cursor-pointer "
-                                onClick={item.onClick}
+                                onClick={() => item.onClick(handlePageNameClick)}
                             >
                                 <Image
                                     src={item.src}

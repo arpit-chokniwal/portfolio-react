@@ -1,7 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { FaArrowRightLong } from "react-icons/fa6";
+import { PageNames } from '../utils/constants';
 
-const SlideToUnlock = ({ setShouldShowLockScreen }) => {
+const SlideToUnlock = ({ setPageName }) => {
     const [sliderLeft, setSliderLeft] = useState(0);
     const sliderRef = useRef();
     const containerRef = useRef();
@@ -12,7 +13,7 @@ const SlideToUnlock = ({ setShouldShowLockScreen }) => {
         const newLeft = e.clientX - containerRect.left - sliderRef.current.offsetWidth / 2;
         const maxLeft = containerRect.width - sliderRef.current.offsetWidth;
         if (newLeft > 100) {
-            setShouldShowLockScreen(false);
+            setPageName(PageNames.HOME);
             setSliderLeft(0)
         } else {
             setSliderLeft(Math.max(0, Math.min(newLeft, maxLeft)));
