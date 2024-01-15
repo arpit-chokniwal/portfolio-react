@@ -8,7 +8,7 @@ const Mail = ({ setShouldShowNav, setPageName }) => {
   useEffect(() => {
     setShouldShowNav(false);
   }, []);
-  const [message, setMessage] = React.useState("Hey 👋");
+  const [message, setMessage] = React.useState("Hey 👋 Arpit...");
   const [subject, setSubject] = React.useState("I'm interested in working with you");
 
   return (
